@@ -1,5 +1,6 @@
 :root {
 --dark: rgb(51, 51, 51);
+--pink: #ff0057;
 
 }
 
@@ -43,9 +44,35 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 1;
+    transform: translateY(100px) ;
 }
 
-.card__face--face2 {
+.container .card:hover .card__face--face1 {
+    transform: translateY(0);
+    background: var(--pink);
+}
+
+.card__face--face1 .card__content {
+    opacity: .2;
+    transition: all .3s ease-in-out;
+}
+
+.container .card__face--face1:hover .card__content {
+    opacity: 1;
+}
+
+.card__face--face1 .card__content svg {
+    max-width: 100px;
+}
+
+.card__face--face1 .card__content h3 {
+    margin: 10px 0 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+}
+.container .card .card__face--face2 {
     position: relative;
     background: white;
     display: flex;
@@ -54,11 +81,17 @@ body {
     align-items: center;
     padding: 20px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, .8);
+    transform: translateY(-100px)
 
 }
 
+.container .card:hover .card__face--face2 {
+    transform: translateY(0)
+}
+
+
 .card__content p {
-    line-height: 1.20;
+    line-height: 1.60;
 }
 
 .card__content a {
@@ -66,17 +99,14 @@ body {
     display: inline-block;
     text-decoration: none;
     font-weight: 900 ;
-    color: white;
     padding: 5px;
-    background-color: var(--dark);
+    border: 2px solid var(--pink);
+    color: var(--dark)
 }
 
-.card__svg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
+.card__content a:hover {
+    background-color: var(--pink);
+    color: white;
 }
 
 svg{
