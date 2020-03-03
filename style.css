@@ -1,0 +1,85 @@
+:root {
+--dark: rgb(51, 51, 51);
+
+}
+
+* {
+    margin:0;
+    padding: 0;    
+    box-sizing: border-box;
+    font-family: 'Nunito';
+}
+
+body {
+    min-height: 100vh ;
+    background-color: var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: inherit;
+}
+
+.container {
+    width: 1000px ;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .card {
+    position: relative;
+}
+
+.card__face {
+    width: 300px ;
+    height: 200px;
+    transition: all .3s ease-in-out;
+}
+
+.card__face--face1 {
+    position: relative;
+    background: var(--dark) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.card__face--face2 {
+    position: relative;
+    background: white;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .8);
+
+}
+
+.card__content p {
+    line-height: 1.20;
+}
+
+.card__content a {
+    margin: 15px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900 ;
+    color: white;
+    padding: 5px;
+    background-color: var(--dark);
+}
+
+.card__svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+svg{
+    height: 6em;
+    color: rgb(243, 243, 243);
+}
