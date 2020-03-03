@@ -49,15 +49,16 @@ body {
 
 .container .card:hover .card__face--face1 {
     transform: translateY(0);
-    background: var(--pink);
+    background-color: var(--pink);
 }
+
 
 .card__face--face1 .card__content {
     opacity: .2;
     transition: all .3s ease-in-out;
 }
 
-.container .card__face--face1:hover .card__content {
+.container .card:hover .card__face--face1 .card__content {
     opacity: 1;
 }
 
@@ -88,7 +89,6 @@ body {
 .container .card:hover .card__face--face2 {
     transform: translateY(0)
 }
-
 
 .card__content p {
     line-height: 1.60;
